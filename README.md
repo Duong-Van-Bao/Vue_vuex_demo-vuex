@@ -1,24 +1,15 @@
-# demo-vuex
+React js:
+    + Redux
+Vue js:
+    + vuex
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Store: 
+   + state: Nơi lưu trữ các trạng thái của ứng dụng
+   + getters:  
+        là những hàm đê lấy ra state 
+        mapGetters 
+    + mutations:             
+        la nhung ham thay doi state
+        mapMutations 
+    + actions: 
+        mapActions# Vue_vuex_demo-vuex
