@@ -1,28 +1,32 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+ <div>
+   <div class="col-6 mx-auto">
+     <add-task @onAddtask="addTask"></add-task>
+     <task-list :tasks="tasks"></task-list>
+   </div>
+ </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import AddTask from './components/AddTask.vue'
+import TaskList from './components/TaskList.vue'
 
 export default {
   name: 'App',
+  data() {
+    return {
+        tasks: [],
+        newTask: {name: '',done: false}
+    }
+  },
   components: {
-    HelloWorld
+    AddTask,
+    TaskList
+  },
+  methods: {
+   addTask(name){
+     this.tasks.push({name: name, done: false})
+   }
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
